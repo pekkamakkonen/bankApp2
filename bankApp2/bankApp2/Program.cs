@@ -13,6 +13,9 @@ namespace bankApp2
             //Create bank
             //Bank bank = new Bank("S-Pankki", "SBANFIHH");
             //BankRepository.Create(bank);
+
+            //Delete bank
+            BankRepository.Delete(3);
             
         }
     }
