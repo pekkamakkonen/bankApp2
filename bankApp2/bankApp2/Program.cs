@@ -25,7 +25,12 @@ namespace bankApp2
             //CustomerRepository.Delete(4);
 
             //Delete Account
-            AccountRepository.Delete("34567890123456789012");
+            //AccountRepository.Delete("34567890123456789012");
+
+            //Print Bank's customers
+            CustomerRepository.PrintCustomers(1);
+
+            Console.ReadKey();
 
         }
     }

@@ -23,5 +23,6 @@ namespace bankApp2.Repositories
                 _context.Bank.Remove(delBank);
             _context.SaveChanges();
         }
+
     }
 }
