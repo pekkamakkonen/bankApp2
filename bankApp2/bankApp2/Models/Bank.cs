@@ -12,6 +12,12 @@ namespace bankApp2.Models
             Customer = new HashSet<Customer>();
         }
 
+        public Bank(string name, string bic)
+        {
+            Name = name;
+            Bic = bic;
+        }
+
         public long Id { get; set; }
         [StringLength(50)]
         public string Name { get; set; }

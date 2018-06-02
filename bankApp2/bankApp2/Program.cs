@@ -1,4 +1,6 @@
 ﻿using System;
+using bankApp2.Models;
+using bankApp2.Repositories;
 
 namespace bankApp2
 {
@@ -6,7 +8,12 @@ namespace bankApp2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("BankApp");
+
+            //Create bank
+            //Bank bank = new Bank("S-Pankki", "SBANFIHH");
+            //BankRepository.Create(bank);
+            
         }
     }
 }
