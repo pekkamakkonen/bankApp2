@@ -8,9 +8,9 @@ namespace bankApp2.Repositories
 {
     class AccountRepository
     {
-        private static BankdbContext _context = new BankdbContext();
+        private readonly BankdbContext _context = new BankdbContext();
 
-        public static void Delete(string iban)
+        public void Delete(string iban)
         {
             var delAccount = _context.Account.FirstOrDefault(a => a.Iban == iban);
             if (delAccount != null)

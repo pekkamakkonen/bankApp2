@@ -9,15 +9,15 @@ namespace bankApp2.Repositories
 {
     class CustomerRepository
     {
-        private static BankdbContext _context = new BankdbContext();
+        private readonly BankdbContext _context = new BankdbContext();
 
-        public static void Create(Customer customer)
+        public void Create(Customer customer)
         {
             _context.Customer.Add(customer);
             _context.SaveChanges();
         }
 
-        public static void Delete(int id)
+        public void Delete(int id)
         {
             var delCustomer = _context.Customer.FirstOrDefault(c => c.Id == id);
             if (delCustomer != null)
@@ -25,13 +25,13 @@ namespace bankApp2.Repositories
             _context.SaveChanges();
         }
 
-        public static void PrintCustomers(int bankId)
+        public void PrintAccountsOfCustomer(int customerId)
         {
-            var customers = _context.Customer.Where(c => c.BankId == bankId);
+            var accounts = _context.Account.Where(a => a.CustomerId == customerId);
 
-            foreach(var customer in customers)
+            foreach (var account in accounts)
             {
-                Console.WriteLine($"{customer.FirstName} {customer.LastName}");
+                Console.WriteLine($"{account.Iban} {account.Name} {account.Balance}");
             }
         }
     }
