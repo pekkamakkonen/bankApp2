@@ -10,13 +10,19 @@ namespace bankApp2
         {
             Console.WriteLine("BankApp");
 
-            //Create bank
+            //Create Bank
             //Bank bank = new Bank("S-Pankki", "SBANFIHH");
             //BankRepository.Create(bank);
 
-            //Delete bank
-            BankRepository.Delete(3);
-            
+            //Delete Bank
+            //BankRepository.Delete(3);
+
+            //Create Customer
+            //Customer customer = new Customer("Jukka", "Salin", 2);
+            //CustomerRepository.Create(customer);
+
+            //Delete Customer
+            CustomerRepository.Delete(4);
         }
     }
 }
