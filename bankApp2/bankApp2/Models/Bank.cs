@@ -18,6 +18,13 @@ namespace bankApp2.Models
             Bic = bic;
         }
 
+        public Bank(long id, string name, string bic)
+        {
+            Id = id;
+            Name = name;
+            Bic = bic;
+        }
+
         public long Id { get; set; }
         [StringLength(50)]
         public string Name { get; set; }

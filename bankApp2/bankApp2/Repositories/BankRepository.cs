@@ -16,6 +16,22 @@ namespace bankApp2.Repositories
             _context.SaveChanges();
         }
 
+        public Bank GetBankById(int id)
+        {
+            var bank = _context.Bank.FirstOrDefault(b => b.Id == id);
+            return bank;
+        }
+
+        public void Update(int id, Bank bank)
+        {
+            var updateBank = GetBankById(id);
+            if (updateBank != null)
+            {
+                _context.Bank.Update(bank);
+            }
+            _context.SaveChanges();
+        }
+
         public void Delete(int id)
         {
             var delBank = _context.Bank.FirstOrDefault(b => b.Id == id);

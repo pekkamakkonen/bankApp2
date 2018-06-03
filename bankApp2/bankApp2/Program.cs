@@ -17,6 +17,12 @@ namespace bankApp2
             //Bank bank = new Bank("S-Pankki", "SBANFIHH");
             //bankRepository.Create(bank);
 
+            //Update Bank
+            Bank updateBank = bankRepository.GetBankById(4);
+            updateBank.Name = "Handelsbanken";
+            updateBank.Bic = "HANDFIHH";
+            bankRepository.Update(4, updateBank);
+
             //Delete Bank
             //bankRepository.Delete(3);
 
