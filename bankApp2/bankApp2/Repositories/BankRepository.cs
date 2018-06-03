@@ -42,22 +42,36 @@ namespace bankApp2.Repositories
 
         public void PrintAccountsOfBank(int bankId)
         {
+            var bank = _context.Bank.Where(b => b.Id == bankId);
             var accounts = _context.Account.Where(a => a.BankId == bankId);
+
+            foreach (var b in bank)
+            {
+                Console.WriteLine($"Pankin {b.Name} tilit:\n");
+            }
 
             foreach (var account in accounts)
             {
                 Console.WriteLine($"{account.Iban} {account.Name} {account.Balance}");
             }
+            Console.WriteLine("---");
         }
 
         public void PrintCustomers(int bankId)
         {
+            var bank = _context.Bank.Where(b => b.Id == bankId);
             var customers = _context.Customer.Where(c => c.BankId == bankId);
+
+            foreach (var b in bank)
+            {
+                Console.WriteLine($"Pankin {b.Name} asiakkaat:\n");
+            }
 
             foreach (var customer in customers)
             {
                 Console.WriteLine($"{customer.FirstName} {customer.LastName}");
             }
+            Console.WriteLine("---");
         }
     }
 }

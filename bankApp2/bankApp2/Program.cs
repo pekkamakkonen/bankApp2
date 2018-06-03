@@ -8,7 +8,8 @@ namespace bankApp2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("BankApp");
+            Console.WriteLine("BankApp\n");
+
             BankRepository bankRepository = new BankRepository();
             CustomerRepository customerRepository = new CustomerRepository();
             AccountRepository accountRepository = new AccountRepository();
@@ -18,10 +19,10 @@ namespace bankApp2
             //bankRepository.Create(bank);
 
             //Update Bank
-            Bank updateBank = bankRepository.GetBankById(4);
-            updateBank.Name = "Handelsbanken";
-            updateBank.Bic = "HANDFIHH";
-            bankRepository.Update(4, updateBank);
+            //Bank updateBank = bankRepository.GetBankById(4);
+            //updateBank.Name = "Handelsbanken";
+            //updateBank.Bic = "HANDFIHH";
+            //bankRepository.Update(4, updateBank);
 
             //Delete Bank
             //bankRepository.Delete(3);
@@ -44,13 +45,16 @@ namespace bankApp2
             //accountRepository.Delete("34567890123456789012");
 
             //Print Bank's Accounts
-            bankRepository.PrintAccountsOfBank(1);
+            bankRepository.PrintAccountsOfBank(4);
 
             //Print Bank's Customers
-            bankRepository.PrintCustomers(2);
+            bankRepository.PrintCustomers(4);
 
             //Print Customer's Accounts and Balances
-            customerRepository.PrintAccountsOfCustomer(2);
+            customerRepository.PrintAccountsOfCustomer(9);
+
+            //Prin Customer's Transactions
+            accountRepository.PrintTransactionsOfCustomer(9);
 
             Console.ReadKey();
 
