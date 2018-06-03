@@ -41,9 +41,10 @@ namespace bankApp2.Repositories
 
                 foreach (var t in transactions)
                 {
-                    Console.WriteLine($"{t.Iban} {t.Amount} {t.TimeStamp}\n");
+                    Console.WriteLine($"{t.Iban} {t.Amount} {t.TimeStamp}");
                 }
             }
+            Console.WriteLine("---");
         }
     }
 }

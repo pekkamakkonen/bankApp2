@@ -15,46 +15,46 @@ namespace bankApp2
             AccountRepository accountRepository = new AccountRepository();
 
             //Create Bank
-            //Bank bank = new Bank("S-Pankki", "SBANFIHH");
-            //bankRepository.Create(bank);
+            Bank bank = new Bank("S-Pankki", "SBANFIHH");
+            bankRepository.Create(bank);
 
             //Update Bank
-            //Bank updateBank = bankRepository.GetBankById(4);
-            //updateBank.Name = "Handelsbanken";
-            //updateBank.Bic = "HANDFIHH";
-            //bankRepository.Update(4, updateBank);
+            Bank updateBank = bankRepository.GetBankById(3);
+            updateBank.Name = "Handelsbanken";
+            updateBank.Bic = "HANDFIHH";
+            bankRepository.Update(3, updateBank);
 
             //Delete Bank
-            //bankRepository.Delete(3);
+            bankRepository.Delete(3);
 
             //Create Customer
-            //Customer customer = new Customer("Jukka", "Salin");
-            //customerRepository.Create(customer);
+            Customer customer = new Customer("Jukka", "Salin", 1);
+            customerRepository.Create(customer);
 
             //Update Customer
-            //Customer updateCustomer = customerRepository.GetCustomerById(9);
-            //updateCustomer.FirstName = "Lasse";
-            //updateCustomer.LastName = "Sievinen";
-            //updateCustomer.BankId = 4;
-            //customerRepository.Update(9, updateCustomer);
+            Customer updateCustomer = customerRepository.GetCustomerById(4);
+            updateCustomer.FirstName = "Lasse";
+            updateCustomer.LastName = "Sievinen";
+            updateCustomer.BankId = 2;
+            customerRepository.Update(4, updateCustomer);
 
             //Delete Customer
-            //customerRepository.Delete(4);
+            customerRepository.Delete(4);
 
             //Delete Account
-            //accountRepository.Delete("34567890123456789012");
+            accountRepository.Delete("FI44 1234");
 
             //Print Bank's Accounts
-            bankRepository.PrintAccountsOfBank(4);
+            bankRepository.PrintAccountsOfBank(1);
 
             //Print Bank's Customers
-            bankRepository.PrintCustomers(4);
+            bankRepository.PrintCustomers(1);
 
             //Print Customer's Accounts and Balances
-            customerRepository.PrintAccountsOfCustomer(9);
+            customerRepository.PrintAccountsOfCustomer(1);
 
-            //Prin Customer's Transactions
-            accountRepository.PrintTransactionsOfCustomer(9);
+            //Print Customer's Transactions
+            accountRepository.PrintTransactionsOfCustomer(1);
 
             Console.ReadKey();
 
