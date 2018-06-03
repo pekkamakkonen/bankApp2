@@ -17,6 +17,22 @@ namespace bankApp2.Repositories
             _context.SaveChanges();
         }
 
+        public Customer GetCustomerById(int id)
+        {
+            var customer = _context.Customer.FirstOrDefault(c => c.Id == id);
+            return customer;
+        }
+
+        public void Update (int id, Customer customer)
+        {
+            var updateCustomer = GetCustomerById(id);
+            if (updateCustomer != null)
+            {
+                _context.Customer.Update(customer);
+            }
+            _context.SaveChanges();
+        }
+
         public void Delete(int id)
         {
             var delCustomer = _context.Customer.FirstOrDefault(c => c.Id == id);

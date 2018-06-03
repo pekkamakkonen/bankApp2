@@ -7,8 +7,22 @@ namespace bankApp2.Models
 {
     public partial class Customer
     {
+        public Customer(string firstName, string lastName)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+        }
+
         public Customer(string firstName, string lastName, long? bankId)
         {
+            FirstName = firstName;
+            LastName = lastName;
+            BankId = bankId;
+        }
+
+        public Customer(long id, string firstName, string lastName, long? bankId)
+        {
+            Id = id;
             FirstName = firstName;
             LastName = lastName;
             BankId = bankId;

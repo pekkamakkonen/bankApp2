@@ -21,8 +21,15 @@ namespace bankApp2
             //bankRepository.Delete(3);
 
             //Create Customer
-            //Customer customer = new Customer("Jukka", "Salin", 2);
+            //Customer customer = new Customer("Jukka", "Salin");
             //customerRepository.Create(customer);
+
+            //Update Customer
+            //Customer updateCustomer = customerRepository.GetCustomerById(9);
+            //updateCustomer.FirstName = "Lasse";
+            //updateCustomer.LastName = "Sievinen";
+            //updateCustomer.BankId = 4;
+            //customerRepository.Update(9, updateCustomer);
 
             //Delete Customer
             //customerRepository.Delete(4);
@@ -34,7 +41,7 @@ namespace bankApp2
             bankRepository.PrintAccountsOfBank(1);
 
             //Print Bank's Customers
-            bankRepository.PrintCustomers(1);
+            bankRepository.PrintCustomers(2);
 
             //Print Customer's Accounts and Balances
             customerRepository.PrintAccountsOfCustomer(2);
